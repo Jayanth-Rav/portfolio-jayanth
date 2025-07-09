@@ -1,0 +1,28 @@
+a {
+  color: #ffd700; // Light blue
+  text-decoration: none;
+
+  &:hover {
+    color: #fcfcfc; // Slightly darker blue on hover (optional)
+    text-decoration: underline; // Optional: Add underline on hover if needed
+  }
+}
+
+.skill-wrapper {
+  width: 45%;           
+  margin-left: 55%;      
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10rem;
+  box-sizing: border-box;
+}
+
+.skill-wrapper .skill-logo {
+  width: 100%;
+  height: auto;
+  object-fit: fill;
+  max-height: 600vh; /* limit height */
+  opacity: 0;
+  animation: fadeIn 1s 0.5s forwards;
+}

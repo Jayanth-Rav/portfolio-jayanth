@@ -1,0 +1,46 @@
+
+.logo-wrapper {
+  width: 40%;           
+  margin-left: 50%;      
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10rem;
+  box-sizing: border-box;
+}
+
+.logo-wrapper .solid-logo {
+  width: 100%;
+  height: auto;
+  object-fit: fill;
+  max-height: 600vh; /* limit height */
+  opacity: 0;
+  animation: fadeIn 1s 0.5s forwards;
+}
+
+.logo-wrapper svg {
+  width: 100%;
+  height: auto;
+  max-height: 1000vh;
+  opacity: 0;
+  animation: draw 3s ease forwards, fadeIn 0.5s 3s forwards;
+
+  .svg-container {
+    stroke: #ffd700;
+    stroke-width: 2;
+    fill: none;
+    stroke-dasharray: 10000;
+    stroke-dashoffset: 10000;
+  }
+}
+
+/* DRAW KEYFRAME */
+@keyframes draw {
+  to { stroke-dashoffset: 0; }
+}
+
+/* FADE-IN KEYFRAME */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
